@@ -7,9 +7,9 @@ mod error;
 
 #[tokio::main]
 async fn main() -> Result<(), ServiceError> {
-    let addr = "[::1]:50051".parse().unwrap();
-    let db_connection = sea_orm::Database::connect(
-        "postgresql://postgres:uzUnvWQLwxBuGWzWFZRRbZKuSoJjaLwl@centerbeam.proxy.rlwy.net:17194/railway").await?;
+    dotenv::dotenv().ok();
+    let addr = format!("[::1]:{}", std::env::var("PORT")?).parse().unwrap();
+    let db_connection = sea_orm::Database::connect(std::env::var("DB_URL")?).await?;
     let auth_service = AuthServiceImpl::new(db_connection);
 
     tonic::transport::Server::builder()

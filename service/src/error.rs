@@ -5,5 +5,7 @@ pub enum ServiceError {
     #[error(transparent)]
     DB(#[from] sea_orm::error::DbErr),
     #[error(transparent)]
-    Transport(#[from] tonic::transport::Error)
+    Transport(#[from] tonic::transport::Error),
+    #[error(transparent)]
+    Env(#[from] std::env::VarError),
 }
