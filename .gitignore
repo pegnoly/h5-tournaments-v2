@@ -1,0 +1,5 @@
+.env
+# Project exclude paths
+/bot/target/
+/service/target/
+/target/

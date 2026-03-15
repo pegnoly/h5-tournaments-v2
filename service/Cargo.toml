@@ -1,0 +1,11 @@
+[package]
+name = "service"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+shared = { path = "../shared"}
+tokio = { version = "1.50.0", features = ["full"] }
+tonic = "0.14.5"
+sea-orm = "2.0.0-rc.37"
+thiserror = "2.0.18"

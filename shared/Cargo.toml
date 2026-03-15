@@ -1,0 +1,13 @@
+[package]
+name = "shared"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tonic = "0.14.5"
+prost = "0.14.3"
+tonic-prost = "0.14.5"
+thiserror = "2.0.18"
+
+[build-dependencies]
+tonic-prost-build = "0.14.5"

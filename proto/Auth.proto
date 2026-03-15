@@ -1,0 +1,30 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+package Auth;
+
+message RegistrationRequest {
+    int64 discord_id = 1;
+    string discord_nickname = 2;
+    string lobby_nickname = 3;
+}
+
+message RegistrationResponse {
+    bool success = 1;
+    string message = 2;
+    google.protobuf.Int64Value user_id = 3;
+}
+
+message UpdateLobbyNicknameRequest {
+    int64 user_id = 1;
+    string new_nickname = 2;
+}
+
+message UpdateLobbyNicknameResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+service AuthService {
+    rpc Register(RegistrationRequest) returns (RegistrationResponse);
+    rpc UpdateLobbyNickname(UpdateLobbyNicknameRequest) returns (UpdateLobbyNicknameResponse);
+}
