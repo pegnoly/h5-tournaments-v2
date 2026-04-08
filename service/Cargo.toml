@@ -5,7 +5,7 @@ edition = "2024"
 
 [dependencies]
 migration = { path = "migrations/migration"}
-shared = { git = "https://github.com/pegnoly/h5-tournaments-v2.git" }
+shared = { path = "../shared"}
 tokio = { version = "1.50.0", features = ["full"] }
 tonic = "0.14.5"
 sea-orm = { version =  "2.0.0-rc.37", features = ["sqlx-postgres", "runtime-tokio"] }
