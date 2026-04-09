@@ -1,12 +1,11 @@
 use std::sync::Arc;
 use sea_orm::{ActiveModelTrait, DatabaseConnection, EntityTrait, IntoActiveModel, Set};
-use tonic::{IntoRequest, Request, Response, Status};
-use shared::auth_service_server::{AuthService, AuthServiceServer};
-use shared::{RegistrationRequest, RegistrationResponse, UpdateLobbyNicknameRequest, UpdateLobbyNicknameResponse};
+use tonic::{Request, Response, Status};
+use shared::auth::auth_service_server::{AuthService, AuthServiceServer};
+use shared::auth::{RegistrationRequest, RegistrationResponse, UpdateLobbyNicknameRequest, UpdateLobbyNicknameResponse};
 use crate::db::DBClient;
 use crate::models::user;
 use crate::models::user::UserDBClient;
-
 pub struct AuthServiceImpl<C: DBClient<Entity = user::Entity>> {
     db: DatabaseConnection,
     user_db_client: C

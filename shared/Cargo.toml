@@ -1,12 +1,11 @@
 [package]
 name = "shared"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 
 [dependencies]
 tonic = "0.14.5"
 prost = "0.14.3"
-thiserror = "2.0.18"
 tonic-prost = "0.14.5"
 sea-orm = "2.0.0-rc.37"
 

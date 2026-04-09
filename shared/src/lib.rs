@@ -1,5 +1,5 @@
-mod error;
-pub mod prelude;
+use tonic::include_proto;
 
-tonic::include_proto!("auth");
-tonic::include_proto!("hero_type_enum");
+include_proto!("auth");
+include_proto!("hero_type_enum");
+include_proto!("common");
