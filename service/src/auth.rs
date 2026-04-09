@@ -1,8 +1,8 @@
 use std::sync::Arc;
 use sea_orm::{ActiveModelTrait, DatabaseConnection, EntityTrait, IntoActiveModel, Set};
 use tonic::{Request, Response, Status};
-use shared::auth::auth_service_server::{AuthService, AuthServiceServer};
-use shared::auth::{RegistrationRequest, RegistrationResponse, UpdateLobbyNicknameRequest, UpdateLobbyNicknameResponse};
+use shared::auth_service_server::{AuthService, AuthServiceServer};
+use shared::{RegistrationRequest, RegistrationResponse, UpdateLobbyNicknameRequest, UpdateLobbyNicknameResponse};
 use crate::db::DBClient;
 use crate::models::user;
 use crate::models::user::UserDBClient;
