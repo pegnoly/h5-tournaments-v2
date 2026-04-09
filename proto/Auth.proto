@@ -2,6 +2,14 @@ syntax = "proto3";
 import "google/protobuf/wrappers.proto";
 package Auth;
 
+enum UserStatus {
+    USER_STATUS_UNDEFINED = 0;
+    USER_STATUS_DEFAULT_USER = 1;
+    USER_STATUS_ORGANIZER = 2;
+    USER_STATUS_MOD_ADMIN = 3;
+    USER_STATUS_SUPER_ADMIN = 4;
+}
+
 message RegistrationRequest {
     int64 discord_id = 1;
     string discord_nickname = 2;

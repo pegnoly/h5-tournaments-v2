@@ -1,0 +1,49 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+package GameReportsService;
+
+message GameReportRequest {
+    oneof request {
+        BaseInteractionRequest base_interaction_request = 1;
+    }
+}
+
+message GameReportResponse {
+    oneof response {
+        NotFoundResponse not_found_response = 1;
+        ActiveMatchesResponse active_matches_response = 2;
+    }
+}
+
+message BaseInteractionRequest {
+    int64 discord_user_id = 1;
+    int64 discord_channel_id = 2;
+}
+
+message NotFoundResponse {
+    string message = 1;
+}
+
+message ActiveMatch {
+    string challonge_id = 1;
+    string opponent_nickname = 2;
+}
+
+message ActiveMatchesResponse {
+    repeated ActiveMatch active_matches = 1;
+}
+
+message RegisterParticipantResponse {
+    string challonge_id = 1;
+    int32 total_registered_participants = 2;
+}
+
+message RemoveParticipantResponse {
+    int32 total_registered_participants = 1;
+}
+
+service GameReportsService {
+    rpc GameReportBuilder(stream GameReportRequest) returns (stream GameReportResponse);
+    rpc RegisterParticipant(BaseInteractionRequest) returns (RegisterParticipantResponse);
+    rpc RemoveParticipant(BaseInteractionRequest) returns (RemoveParticipantResponse);
+}
