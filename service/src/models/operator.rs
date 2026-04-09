@@ -1,5 +1,5 @@
 use sea_orm::prelude::*;
-use shared::HeroType;
+use shared_gen::hero_type_enum::HeroType;
 
 #[sea_orm::model]
 #[derive(Debug, Clone, Eq, PartialEq, DeriveEntityModel)]

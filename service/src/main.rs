@@ -1,5 +1,5 @@
 // use migration::MigratorTrait;
-use shared::auth_service_server::AuthServiceServer;
+use shared_gen::auth::auth_service_server::AuthServiceServer;
 use crate::auth::AuthServiceImpl;
 use crate::error::ServiceError;
 mod auth;

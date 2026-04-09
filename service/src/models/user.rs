@@ -1,6 +1,6 @@
 use chrono::NaiveDateTime;
 use sea_orm::prelude::*;
-use shared::UserStatus;
+use shared_gen::auth::UserStatus;
 use crate::db::DBClient;
 
 #[sea_orm::model]

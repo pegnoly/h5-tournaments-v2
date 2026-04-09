@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/shared/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/service/migration/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/service/migrations/migration/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/shared-gen/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/bot/target" />
       <excludeFolder url="file://$MODULE_DIR$/service/target" />
       <excludeFolder url="file://$MODULE_DIR$/desktop/src-tauri/target" />

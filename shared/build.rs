@@ -7,6 +7,7 @@ fn main() {
         .find(|path| path.ends_with("h5-tournaments-v2"))
         .unwrap();
     tonic_prost_build::configure()
+        .out_dir(out_dir.join("shared-gen/src"))
         .enum_attribute("HeroType", "#[derive(sea_orm::EnumIter, sea_orm::DeriveActiveEnum)]")
         .enum_attribute("HeroType", "#[sea_orm(rs_type = \"i32\", db_type = \"Integer\")]")
         .enum_attribute("UserStatus", "#[derive(sea_orm::EnumIter, sea_orm::DeriveActiveEnum)]")
