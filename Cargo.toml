@@ -1,3 +1,6 @@
 [workspace]
 members = ["shared", "service", "bot", "desktop/src-tauri", "shared-gen"]
 resolver = "2"
+
+[patch.pegn0ly-private-crates]
+shared-gen = { path = "shared-gen"}

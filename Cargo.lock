@@ -5039,7 +5039,7 @@ dependencies = [
  "chrono",
  "dotenv",
  "sea-orm",
- "shared-gen 0.1.1 (sparse+https://cargo.cloudsmith.io/pegn0ly/private-crates/)",
+ "shared-gen",
  "thiserror 2.0.18",
  "tokio",
  "tonic",
@@ -5100,18 +5100,6 @@ dependencies = [
 [[package]]
 name = "shared-gen"
 version = "0.1.1"
-dependencies = [
- "prost",
- "sea-orm",
- "tonic",
- "tonic-prost",
-]
-
-[[package]]
-name = "shared-gen"
-version = "0.1.1"
-source = "sparse+https://cargo.cloudsmith.io/pegn0ly/private-crates/"
-checksum = "22d9f0764c525286c2def5074054c86733f125f106e7602471c5f743ffd5c3ae"
 dependencies = [
  "prost",
  "sea-orm",
