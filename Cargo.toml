@@ -1,6 +1,7 @@
 [workspace]
-members = ["shared", "service", "bot", "desktop/src-tauri", "shared-gen"]
+members = ["shared", "service", "bot", "desktop/src-tauri", "shared-gen", "service/migrations/migration"]
 resolver = "2"
 
 [patch.pegn0ly-private-crates]
 shared-gen = { path = "shared-gen"}
+migration = { path = "service/migrations/migration"}
